@@ -5,7 +5,7 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'reactplayer-inline-flex reactplayer-items-center reactplayer-justify-center reactplayer-gap-2 reactplayer-whitespace-nowrap reactplayer-rounded-md reactplayer-text-sm reactplayer-font-medium reactplayer-ring-offset-background reactplayer-transition-colors focus-visible:reactplayer-outline-none focus-visible:reactplayer-ring-2 focus-visible:reactplayer-ring-ring focus-visible:reactplayer-ring-offset-2 disabled:reactplayer-pointer-events-none disabled:reactplayer-opacity-50 [&_svg]:reactplayer-pointer-events-none [&_svg]:reactplayer-size-4 [&_svg]:reactplayer-shrink-0',
+  'reactplayer-inline-flex reactplayer-items-center reactplayer-justify-center reactplayer-gap-2 reactplayer-whitespace-nowrap !reactplayer-rounded-[4px] reactplayer-text-sm reactplayer-font-medium reactplayer-ring-offset-background reactplayer-transition-colors focus-visible:reactplayer-outline-none focus-visible:reactplayer-ring-2 focus-visible:reactplayer-ring-ring focus-visible:reactplayer-ring-offset-2 disabled:reactplayer-pointer-events-none disabled:reactplayer-opacity-50 [&_svg]:reactplayer-pointer-events-none [&_svg]:reactplayer-size-4 [&_svg]:reactplayer-shrink-0',
   {
     variants: {
       variant: {
@@ -21,8 +21,8 @@ const buttonVariants = cva(
       },
       size: {
         default: 'reactplayer-h-10 reactplayer-px-4 reactplayer-py-2',
-        sm: 'reactplayer-h-9 reactplayer-rounded-md reactplayer-px-3',
-        lg: 'reactplayer-h-11 reactplayer-rounded-md reactplayer-px-8',
+        sm: 'reactplayer-h-9 !reactplayer-rounded-[4px] reactplayer-px-3',
+        lg: 'reactplayer-h-11 !reactplayer-rounded-[4px] reactplayer-px-8',
         icon: 'reactplayer-h-10 reactplayer-w-10',
       },
     },

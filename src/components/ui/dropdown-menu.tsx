@@ -1,6 +1,7 @@
 'use client';
 
 import * as React from 'react';
+
 import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
 import { Check, ChevronRight, Circle } from 'lucide-react';
 
@@ -47,7 +48,7 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-      'reactplayer-z-50 reactplayer-min-w-[8rem] reactplayer-overflow-hidden reactplayer-rounded-md reactplayer-border reactplayer-bg-popover reactplayer-p-1 reactplayer-text-popover-foreground reactplayer-shadow-lg data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-dropdown-menu-content-transform-origin]',
+      'reactplayer-z-50 reactplayer-min-w-[8rem] reactplayer-overflow-hidden !reactplayer-rounded-[4px] reactplayer-border reactplayer-bg-popover reactplayer-p-1 reactplayer-text-popover-foreground reactplayer-shadow-lg data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-dropdown-menu-content-transform-origin]',
       className
     )}
     {...props}
@@ -65,7 +66,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        'reactplayer-z-50 reactplayer-max-h-[var(--radix-dropdown-menu-content-available-height)] reactplayer-min-w-[8rem] reactplayer-overflow-y-auto reactplayer-overflow-x-hidden reactplayer-rounded-md reactplayer-border reactplayer-bg-popover reactplayer-p-1 reactplayer-text-popover-foreground reactplayer-shadow-md data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-dropdown-menu-content-transform-origin]',
+        'reactplayer-z-50 reactplayer-max-h-[var(--radix-dropdown-menu-content-available-height)] reactplayer-min-w-[8rem] reactplayer-overflow-y-auto reactplayer-overflow-x-hidden !reactplayer-rounded-[4px] reactplayer-border reactplayer-bg-popover reactplayer-p-1 reactplayer-text-popover-foreground reactplayer-shadow-md data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-dropdown-menu-content-transform-origin]',
         className
       )}
       {...props}
@@ -97,19 +98,20 @@ const DropdownMenuCheckboxItem = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.CheckboxItem>
 >(({ className, children, checked, ...props }, ref) => (
   <DropdownMenuPrimitive.CheckboxItem
+    checked={checked}
     ref={ref}
     className={cn(
       'reactplayer-relative reactplayer-flex reactplayer-cursor-default reactplayer-select-none reactplayer-items-center reactplayer-rounded-sm reactplayer-py-1.5 reactplayer-pl-8 reactplayer-pr-2 reactplayer-text-sm reactplayer-outline-none reactplayer-transition-colors focus:reactplayer-bg-accent focus:reactplayer-text-accent-foreground data-[disabled]:reactplayer-pointer-events-none data-[disabled]:reactplayer-opacity-50',
       className
     )}
-    checked={checked}
     {...props}
   >
-    <span className="reactplayer-absolute reactplayer-left-2 reactplayer-flex reactplayer-h-3.5 reactplayer-w-3.5 reactplayer-items-center reactplayer-justify-center">
+    <span className="reactplayer-absolute reactplayer-left-2 reactplayer-flex reactplayer-size-3.5 reactplayer-items-center reactplayer-justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <Check className="reactplayer-h-4 reactplayer-w-4" />
+        <Check className="reactplayer-size-4" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
+
     {children}
   </DropdownMenuPrimitive.CheckboxItem>
 ));
@@ -128,11 +130,12 @@ const DropdownMenuRadioItem = React.forwardRef<
     )}
     {...props}
   >
-    <span className="reactplayer-absolute reactplayer-left-2 reactplayer-flex reactplayer-h-3.5 reactplayer-w-3.5 reactplayer-items-center reactplayer-justify-center">
+    <span className="reactplayer-absolute reactplayer-left-2 reactplayer-flex reactplayer-size-3.5 reactplayer-items-center reactplayer-justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <Circle className="reactplayer-h-2 reactplayer-w-2 reactplayer-fill-current" />
+        <Circle className="reactplayer-size-2 reactplayer-fill-current" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
+
     {children}
   </DropdownMenuPrimitive.RadioItem>
 ));
@@ -161,8 +164,8 @@ const DropdownMenuSeparator = React.forwardRef<
   React.ComponentPropsWithoutRef<typeof DropdownMenuPrimitive.Separator>
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
-    ref={ref}
     className={cn('reactplayer--mx-1 reactplayer-my-1 reactplayer-h-px reactplayer-bg-muted', className)}
+    ref={ref}
     {...props}
   />
 ));

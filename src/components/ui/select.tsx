@@ -19,7 +19,7 @@ const SelectTrigger = React.forwardRef<
   <SelectPrimitive.Trigger
     ref={ref}
     className={cn(
-      'reactplayer-flex reactplayer-h-10 reactplayer-w-full reactplayer-items-center reactplayer-justify-between reactplayer-rounded-md reactplayer-border reactplayer-border-input reactplayer-bg-background reactplayer-px-3 reactplayer-py-2 reactplayer-text-sm reactplayer-ring-offset-background data-[placeholder]:reactplayer-text-muted-foreground focus:reactplayer-outline-none focus:reactplayer-ring-2 focus:reactplayer-ring-ring focus:reactplayer-ring-offset-2 disabled:reactplayer-cursor-not-allowed disabled:reactplayer-opacity-50 [&>span]:reactplayer-line-clamp-1',
+      'reactplayer-flex reactplayer-h-10 reactplayer-w-full reactplayer-items-center reactplayer-justify-between !reactplayer-rounded-[4px] reactplayer-border reactplayer-border-input reactplayer-bg-background reactplayer-px-3 reactplayer-py-2 reactplayer-text-sm reactplayer-ring-offset-background data-[placeholder]:reactplayer-text-muted-foreground focus:reactplayer-outline-none focus:reactplayer-ring-2 focus:reactplayer-ring-ring focus:reactplayer-ring-offset-2 disabled:reactplayer-cursor-not-allowed disabled:reactplayer-opacity-50 [&>span]:reactplayer-line-clamp-1',
       className
     )}
     {...props}
@@ -75,7 +75,7 @@ const SelectContent = React.forwardRef<
     <SelectPrimitive.Content
       ref={ref}
       className={cn(
-        'reactplayer-relative reactplayer-z-50 reactplayer-max-h-[--radix-select-content-available-height] reactplayer-min-w-[8rem] reactplayer-overflow-y-auto reactplayer-overflow-x-hidden reactplayer-rounded-md reactplayer-border reactplayer-bg-popover reactplayer-text-popover-foreground reactplayer-shadow-md data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-select-content-transform-origin]',
+        'reactplayer-relative reactplayer-z-50 reactplayer-max-h-[--radix-select-content-available-height] reactplayer-min-w-[8rem] reactplayer-overflow-y-auto reactplayer-overflow-x-hidden !reactplayer-rounded-[4px] reactplayer-border reactplayer-bg-popover reactplayer-text-popover-foreground reactplayer-shadow-md data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-select-content-transform-origin]',
         position === 'popper' &&
           'data-[side=bottom]:reactplayer-translate-y-1 data-[side=left]:reactplayer--translate-x-1 data-[side=right]:reactplayer-translate-x-1 data-[side=top]:reactplayer--translate-y-1',
         className

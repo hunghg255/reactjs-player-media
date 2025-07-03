@@ -1,5 +1,3 @@
-
-
 import {
   MediaPlayer,
   MediaPlayerControls,
@@ -19,13 +17,69 @@ import {
   MediaPlayerSettings,
   MediaPlayerVolumeIndicator,
   MediaPlayerLoading,
-MediaPlayerError,
-MediaPlayerCaptions,
+  MediaPlayerError,
+  MediaPlayerCaptions,
+  MediaPlayerAudio,
+  MediaPlayerLoop,
 } from 'reactjs-player-media';
 
 import 'reactjs-player-media/style.css'
 
-export function MediaPlayerSettingsDemo() {
+function MediaPlayerBasic() {
+  return <>
+    <MediaPlayer>
+      <MediaPlayerVideo>
+        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
+      </MediaPlayerVideo>
+      <MediaPlayerControls
+        style={{
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '10px',
+        }}
+      >
+        <MediaPlayerControlsOverlay />
+        <MediaPlayerSeek />
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            alignItems: 'center',
+            gap: '8px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flex: 1,
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <MediaPlayerPlay />
+            <MediaPlayerSeekBackward />
+            <MediaPlayerSeekForward />
+            <MediaPlayerVolume expandable />
+            <MediaPlayerTime />
+          </div>
+          <div
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <MediaPlayerPlaybackSpeed />
+            <MediaPlayerPiP />
+            <MediaPlayerFullscreen />
+          </div>
+        </div>
+      </MediaPlayerControls>
+    </MediaPlayer>
+  </>
+}
+
+function MediaPlayerSettingsDemo() {
   return (
     <MediaPlayer autoHide>
       <MediaPlayerVideo
@@ -68,20 +122,138 @@ export function MediaPlayerSettingsDemo() {
       <MediaPlayerLoading />
       <MediaPlayerError />
       <MediaPlayerVolumeIndicator />
-      <MediaPlayerControls className="flex-col items-start gap-2.5">
+      <MediaPlayerControls
+        style={{
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '10px',
+        }}
+      >
         <MediaPlayerControlsOverlay />
         <MediaPlayerSeek />
-        <div className="flex w-full items-center gap-2">
-          <div className="flex flex-1 items-center gap-2">
+        <div style={{
+          display: 'flex',
+          width: '100%',
+          alignItems: 'center',
+          gap: '8px',
+        }}>
+          <div style={{
+            display: 'flex',
+            flex: 1,
+            alignItems: 'center',
+            gap: '8px',
+          }}>
             <MediaPlayerPlay />
             <MediaPlayerSeekBackward />
             <MediaPlayerSeekForward />
             <MediaPlayerVolume expandable />
             <MediaPlayerTime />
           </div>
-          <div className="flex items-center gap-2">
+          <div style={{
+            display: 'flex',
+            alignItems: 'center',
+            gap: '8px',
+          }}>
             <MediaPlayerCaptions />
             <MediaPlayerSettings />
+            <MediaPlayerPiP />
+            <MediaPlayerFullscreen />
+          </div>
+        </div>
+      </MediaPlayerControls>
+    </MediaPlayer>
+  );
+}
+
+function MediaPlayerAudioDemo() {
+  return (
+    <MediaPlayer
+      style={{
+        height: '80px',
+      }}
+    >
+      <MediaPlayerAudio className="sr-only"
+
+      >
+        <source src="/art.mp3" type="audio/mp3" />
+      </MediaPlayerAudio>
+      <MediaPlayerControls
+        style={{
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '10px',
+        }}
+      >
+        <MediaPlayerSeek withTime />
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '8px',
+          }}
+        >
+          <MediaPlayerSeekBackward />
+          <MediaPlayerPlay />
+          <MediaPlayerSeekForward />
+          <MediaPlayerVolume />
+          <MediaPlayerPlaybackSpeed />
+          <MediaPlayerLoop />
+        </div>
+      </MediaPlayerControls>
+    </MediaPlayer>
+  );
+}
+
+function MediaPlayerErrorDemo() {
+  return (
+    <MediaPlayer>
+      <MediaPlayerVideo
+        src="/assets/nonexistent-video.mp4"
+        playsInline
+        crossOrigin=""
+      />
+      <MediaPlayerError />
+      <MediaPlayerControls
+        style={{
+          flexDirection: 'column',
+          alignItems: 'flex-start',
+          gap: '10px',
+        }}
+      >
+        <MediaPlayerControlsOverlay />
+        <MediaPlayerSeek />
+        <div
+          style={{
+            display: 'flex',
+            width: '100%',
+            alignItems: 'center',
+            gap: '8px',
+          }}
+        >
+          <div
+            style={{
+              display: 'flex',
+              flex: 1,
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <MediaPlayerPlay />
+            <MediaPlayerSeekBackward />
+            <MediaPlayerSeekForward />
+            <MediaPlayerVolume expandable />
+            <MediaPlayerTime />
+          </div>
+          <div className="flex items-center gap-2"
+            style={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '8px',
+            }}
+          >
+            <MediaPlayerPlaybackSpeed />
             <MediaPlayerPiP />
             <MediaPlayerFullscreen />
           </div>
@@ -102,31 +274,48 @@ function App() {
         margin: '40px auto',
       }}
     >
-      <MediaPlayer>
-      <MediaPlayerVideo>
-        <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
-      </MediaPlayerVideo>
-      <MediaPlayerControls className="flex-col items-start gap-2.5">
-        <MediaPlayerControlsOverlay />
-        <MediaPlayerSeek />
-        <div className="flex w-full items-center gap-2">
-          <div className="flex flex-1 items-center gap-2">
-            <MediaPlayerPlay />
-            <MediaPlayerSeekBackward />
-            <MediaPlayerSeekForward />
-            <MediaPlayerVolume expandable />
-            <MediaPlayerTime />
-          </div>
-          <div className="flex items-center gap-2">
-            <MediaPlayerPlaybackSpeed />
-            <MediaPlayerPiP />
-            <MediaPlayerFullscreen />
-          </div>
-        </div>
-      </MediaPlayerControls>
-    </MediaPlayer>
+      <div
+        style={{
+          display: 'flex',
+          gap: '12px',
+          marginBottom: 10,
+        }}
+        className="buttonWrap"
+      >
+        <button
+          onClick={() => {
+            window.open('https://github.com/hunghg255/reactjs-player-media-playground', '_blank');
+          }}
+        >
+          Source Demo
+        </button>
+        <button
+          onClick={() => {
+            window.open('https://github.com/hunghg255/reactjs-player-media', '_blank');
+          }}
+        >
+          Documentation
+        </button>
+      </div>
 
-    <MediaPlayerSettingsDemo />
+
+      <h2>Media Player</h2>
+      <MediaPlayerBasic />
+
+      <br />
+      <h2>Audio Player</h2>
+
+      <MediaPlayerSettingsDemo />
+
+      <br />
+
+      <h2>With Settings Menu</h2>
+      <MediaPlayerAudioDemo />
+
+      <br />
+
+      <h3>Video Error</h3>
+      <MediaPlayerErrorDemo />
     </div>
   )
 }

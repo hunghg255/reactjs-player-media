@@ -64,6 +64,8 @@ import { useComposedRefs } from '@/lib/compose-refs';
 import { cn } from '@/lib/utils';
 
 import '../styles/index.scss';
+import { removeCSS, updateCSS } from '@/utils/dynamicCSS';
+import { RESET_CSS } from '@/constants/resetCSS';
 
 const ROOT_NAME = 'MediaPlayer';
 const SEEK_NAME = 'MediaPlayerSeek';
@@ -237,6 +239,14 @@ function MediaPlayerRoot(props: MediaPlayerRootProps) {
     () => createStore(listenersRef, stateRef),
     [listenersRef, stateRef],
   );
+
+  React.useEffect(() => {
+    updateCSS(RESET_CSS, 'react-media-reset');
+
+    return () => {
+      removeCSS('react-media-reset');
+    };
+  });
 
   return (
     <MediaProvider>
@@ -2163,14 +2173,14 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
           >
             <div
               className={cn(
-                'reactplayer-flex reactplayer-flex-col reactplayer-items-center reactplayer-gap-1.5 reactplayer-rounded-md reactplayer-border reactplayer-bg-background reactplayer-text-foreground reactplayer-shadow-sm dark:reactplayer-bg-zinc-900',
+                'reactplayer-flex reactplayer-flex-col reactplayer-items-center reactplayer-gap-1.5 !reactplayer-rounded-[4px] reactplayer-border reactplayer-bg-background reactplayer-text-foreground reactplayer-shadow-sm dark:reactplayer-bg-zinc-900',
                 thumbnail && 'reactplayer-min-h-10',
                 !thumbnail && currentChapterCue && 'reactplayer-px-3 reactplayer-py-1.5',
               )}
             >
               {thumbnail?.src && (
                 <div
-                  className="reactplayer-overflow-hidden reactplayer-rounded-md reactplayer-rounded-b-none"
+                  className="reactplayer-overflow-hidden !reactplayer-rounded-[4px] reactplayer-rounded-b-none"
                   data-slot="media-player-seek-thumbnail"
                   style={{
                     width: `${SPRITE_CONTAINER_WIDTH}px`,
@@ -2541,7 +2551,7 @@ function MediaPlayerPlaybackSpeed(props: MediaPlayerPlaybackSpeedProps) {
 
       <DropdownMenuContent
         align="center"
-        className="reactplayer-min-w-[var(--radix-dropdown-menu-trigger-width)] data-[side=top]:reactplayer-mb-3.5"
+        className="reactplayer-min-w-[var(--radix-dropdown-menu-trigger-width)]"
         //@ts-expect-error
         container={context.portalContainer}
         sideOffset={sideOffset}
@@ -3007,7 +3017,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
 
       <DropdownMenuContent
         align="end"
-        className="reactplayer-w-56 data-[side=top]:reactplayer-mb-3.5"
+        className="reactplayer-w-56"
         //@ts-expect-error
         container={context.portalContainer as any}
         side="top"
@@ -3207,7 +3217,7 @@ function MediaPlayerTooltip(props: MediaPlayerTooltipProps) {
         </TooltipTrigger>
 
         <TooltipContent
-          className="reactplayer-flex reactplayer-items-center reactplayer-gap-2 reactplayer-border reactplayer-bg-accent reactplayer-px-2 reactplayer-py-1 reactplayer-font-medium reactplayer-text-foreground data-[side=top]:reactplayer-mb-3.5 dark:reactplayer-bg-zinc-900 [&>span]:reactplayer-hidden"
+          className="reactplayer-flex reactplayer-items-center reactplayer-gap-2 !reactplayer-border reactplayer-bg-accent reactplayer-px-2 reactplayer-py-1 reactplayer-font-medium reactplayer-text-foreground dark:reactplayer-bg-zinc-900 [&>span]:reactplayer-hidden"
           //@ts-expect-error
           container={context.portalContainer}
           sideOffset={tooltipSideOffset}
