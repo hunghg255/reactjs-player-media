@@ -1,7 +1,13 @@
 export const RESET_CSS = `
 .reactjs-player-media {
   button {
-    all: unset;
+    background: transparent;
+    outline: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    border-radius: 4px;
   }
 }
 `;
