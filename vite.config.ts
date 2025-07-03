@@ -88,7 +88,7 @@ export default defineConfig(async ({ mode }) => {
           postcssReplace({
             pattern: /(--tw|\*, ::before, ::after)/g,
             data: {
-              '--tw': '--richtext', // Prefixing
+              '--tw': '--reactplayer', // Prefixing
               '*, ::before, ::after': ':root', // So variables does not pollute every element
             },
           }),

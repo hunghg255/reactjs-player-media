@@ -64,8 +64,6 @@ import { useComposedRefs } from '@/lib/compose-refs';
 import { cn } from '@/lib/utils';
 
 import '../styles/index.scss';
-import { RESET_CSS } from '@/constants/resetCSS';
-import { removeCSS, updateCSS } from '@/utils/dynamicCSS';
 
 const ROOT_NAME = 'MediaPlayer';
 const SEEK_NAME = 'MediaPlayerSeek';
@@ -2306,14 +2304,6 @@ function MediaPlayerVolume(props: MediaPlayerVolumeProps) {
     },
     [dispatch, store],
   );
-
-  React.useEffect(() => {
-    updateCSS(RESET_CSS, 'react-media-reset');
-
-    return () => {
-      removeCSS('react-media-reset');
-    };
-  }, []);
 
   const effectiveVolume = mediaMuted ? 0 : mediaVolume;
 
