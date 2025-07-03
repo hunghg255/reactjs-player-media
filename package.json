@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.2",
   "packageManager": "pnpm@8.15.9",
-  "description": "A modern WYSIWYG rich text editor based on tiptap and shadcn ui for React",
+  "description": "A modern media player based on tiptap and shadcn ui for React",
   "license": "MIT",
   "homepage": "https://reactjs-player-media.vercel.app/",
   "repository": {
@@ -13,19 +13,8 @@
   "bugs": "https://github.com/hunghg255/reactjs-player-media/issues",
   "keywords": [
     "react",
-    "tiptap",
-    "editor",
-    "wysiwyg",
-    "rich-text",
-    "reactjs-player-media",
-    "tiptap-editor",
-    "tiptap-react",
-    "tiptap-react-editor",
-    "tiptap-react-wysiwyg",
-    "tiptap-react-rich-text",
-    "tiptap-react-rc-editor",
-    "tiptap-react-rc-wysiwyg",
-    "tiptap-react-rc-rich-text"
+    "media",
+    "reactjs-player-media"
   ],
   "sideEffects": false,
   "main": "./lib/index.cjs",

@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
- A modern WYSIWYG rich-text editor base on Tiptap uses Shadcn components.
+ A modern media player based on tiptap and shadcn ui for React
 </p>
 
 <p align="center">
