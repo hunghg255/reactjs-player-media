@@ -789,20 +789,20 @@ function MediaPlayerRootImpl(props: MediaPlayerRootProps) {
         onMouseMove={onMouseMove}
         ref={composedRef}
         className={cn(
-          'richtext-dark richtext-relative richtext-isolate richtext-flex richtext-flex-col richtext-overflow-hidden richtext-rounded-lg richtext-bg-background richtext-outline-none focus-visible:richtext-border-ring focus-visible:richtext-ring-[3px] focus-visible:richtext-ring-ring/50 data-[disabled]:richtext-pointer-events-none data-[disabled]:richtext-opacity-50 [&_video]:richtext-relative [&_video]:richtext-object-contain',
-          'data-[state=fullscreen]:[&_video]:richtext-size-full [:fullscreen_&]:richtext-flex [:fullscreen_&]:richtext-h-full [:fullscreen_&]:richtext-max-h-screen [:fullscreen_&]:richtext-flex-col [:fullscreen_&]:richtext-justify-between',
-          '[&_[data-slider]::before]:richtext--top-4 [&_[data-slider]::before]:richtext--bottom-2 [&_[data-slider]::before]:richtext-absolute [&_[data-slider]::before]:richtext-inset-x-0 [&_[data-slider]::before]:richtext-z-10 [&_[data-slider]::before]:richtext-h-8 [&_[data-slider]::before]:richtext-cursor-pointer [&_[data-slider]::before]:richtext-content-[] [&_[data-slider]]:richtext-relative [&_[data-slot=media-player-seek]:not([data-hovering])::before]:richtext-cursor-default',
-          '[&_video::-webkit-media-text-track-display]:richtext-top-auto! [&_video::-webkit-media-text-track-display]:richtext-bottom-[4%]! [&_video::-webkit-media-text-track-display]:richtext-mb-0! data-[state=fullscreen]:data-[controls-visible]:[&_video::-webkit-media-text-track-display]:richtext-bottom-[9%]! data-[controls-visible]:[&_video::-webkit-media-text-track-display]:richtext-bottom-[13%]! data-[state=fullscreen]:[&_video::-webkit-media-text-track-display]:richtext-bottom-[7%]!',
+          'reactjs-player-media reactplayer-dark reactplayer-relative reactplayer-isolate reactplayer-flex reactplayer-flex-col reactplayer-overflow-hidden reactplayer-rounded-lg reactplayer-bg-background reactplayer-outline-none focus-visible:reactplayer-border-ring focus-visible:reactplayer-ring-[3px] focus-visible:reactplayer-ring-ring/50 data-[disabled]:reactplayer-pointer-events-none data-[disabled]:reactplayer-opacity-50 [&_video]:reactplayer-relative [&_video]:reactplayer-object-contain',
+          'data-[state=fullscreen]:[&_video]:reactplayer-size-full [:fullscreen_&]:reactplayer-flex [:fullscreen_&]:reactplayer-h-full [:fullscreen_&]:reactplayer-max-h-screen [:fullscreen_&]:reactplayer-flex-col [:fullscreen_&]:reactplayer-justify-between',
+          '[&_[data-slider]::before]:reactplayer--top-4 [&_[data-slider]::before]:reactplayer--bottom-2 [&_[data-slider]::before]:reactplayer-absolute [&_[data-slider]::before]:reactplayer-inset-x-0 [&_[data-slider]::before]:reactplayer-z-10 [&_[data-slider]::before]:reactplayer-h-8 [&_[data-slider]::before]:reactplayer-cursor-pointer [&_[data-slider]::before]:reactplayer-content-[] [&_[data-slider]]:reactplayer-relative [&_[data-slot=media-player-seek]:not([data-hovering])::before]:reactplayer-cursor-default',
+          '[&_video::-webkit-media-text-track-display]:reactplayer-top-auto! [&_video::-webkit-media-text-track-display]:reactplayer-bottom-[4%]! [&_video::-webkit-media-text-track-display]:reactplayer-mb-0! data-[state=fullscreen]:data-[controls-visible]:[&_video::-webkit-media-text-track-display]:reactplayer-bottom-[9%]! data-[controls-visible]:[&_video::-webkit-media-text-track-display]:reactplayer-bottom-[13%]! data-[state=fullscreen]:[&_video::-webkit-media-text-track-display]:reactplayer-bottom-[7%]!',
           className,
         )}
       >
-        <span className="richtext-sr-only"
+        <span className="reactplayer-sr-only"
           id={labelId}
         >
           {label ?? 'Media player'}
         </span>
 
-        <span className="richtext-sr-only"
+        <span className="reactplayer-sr-only"
           id={descriptionId}
         >
           {isVideo
@@ -910,7 +910,7 @@ function MediaPlayerControls(props: MediaPlayerControlsProps) {
       data-visible={controlsVisible ? '' : undefined}
       dir={context.dir}
       className={cn(
-        'richtext-dark richtext-pointer-events-none richtext-absolute richtext-right-0 richtext-bottom-0 richtext-left-0 richtext-z-50 richtext-flex richtext-items-center richtext-gap-2 richtext-px-4 richtext-py-3 richtext-opacity-0 richtext-transition-opacity richtext-duration-200 data-[visible]:richtext-pointer-events-auto data-[visible]:richtext-opacity-100 [:fullscreen_&]:richtext-px-6 [:fullscreen_&]:richtext-py-4',
+        'reactplayer-dark reactplayer-pointer-events-none reactplayer-absolute reactplayer-right-0 reactplayer-bottom-0 reactplayer-left-0 reactplayer-z-50 reactplayer-flex reactplayer-items-center reactplayer-gap-2 reactplayer-px-4 reactplayer-py-3 reactplayer-opacity-0 reactplayer-transition-opacity reactplayer-duration-200 data-[visible]:reactplayer-pointer-events-auto data-[visible]:reactplayer-opacity-100 [:fullscreen_&]:reactplayer-px-6 [:fullscreen_&]:reactplayer-py-4',
         className,
       )}
       {...controlsProps}
@@ -981,11 +981,11 @@ function MediaPlayerLoading(props: MediaPlayerLoadingProps) {
       role="status"
       {...loadingProps}
       className={cn(
-        'richtext-fade-in-0 richtext-zoom-in-95 richtext-pointer-events-none richtext-absolute richtext-inset-0 richtext-z-50 richtext-flex richtext-animate-in richtext-items-center richtext-justify-center richtext-duration-200',
+        'reactplayer-fade-in-0 reactplayer-zoom-in-95 reactplayer-pointer-events-none reactplayer-absolute reactplayer-inset-0 reactplayer-z-50 reactplayer-flex reactplayer-animate-in reactplayer-items-center reactplayer-justify-center reactplayer-duration-200',
         className,
       )}
     >
-      <Loader2Icon className="richtext-size-20 richtext-animate-spin richtext-stroke-[.0938rem] richtext-text-primary" />
+      <Loader2Icon className="reactplayer-size-20 reactplayer-animate-spin reactplayer-stroke-[.0938rem] reactplayer-text-primary" />
     </LoadingPrimitive>
   );
 }
@@ -1113,25 +1113,25 @@ function MediaPlayerError(props: MediaPlayerErrorProps) {
       role="alert"
       {...errorProps}
       className={cn(
-        'richtext-pointer-events-auto richtext-absolute richtext-inset-0 richtext-z-50 richtext-flex richtext-flex-col richtext-items-center richtext-justify-center richtext-bg-black/80 richtext-text-white richtext-backdrop-blur-sm',
+        'reactplayer-pointer-events-auto reactplayer-absolute reactplayer-inset-0 reactplayer-z-50 reactplayer-flex reactplayer-flex-col reactplayer-items-center reactplayer-justify-center reactplayer-bg-black/80 reactplayer-text-white reactplayer-backdrop-blur-sm',
         className,
       )}
     >
       {children ?? (
-        <div className="richtext-flex richtext-max-w-md richtext-flex-col richtext-items-center richtext-gap-4 richtext-px-6 richtext-py-8 richtext-text-center">
-          <AlertTriangleIcon className="richtext-size-12 richtext-text-destructive" />
+        <div className="reactplayer-flex reactplayer-max-w-md reactplayer-flex-col reactplayer-items-center reactplayer-gap-4 reactplayer-px-6 reactplayer-py-8 reactplayer-text-center">
+          <AlertTriangleIcon className="reactplayer-size-12 reactplayer-text-destructive" />
 
-          <div className="richtext-flex richtext-flex-col richtext-gap-px richtext-text-center">
-            <h3 className="richtext-text-xl richtext-font-semibold richtext-tracking-tight">
+          <div className="reactplayer-flex reactplayer-flex-col reactplayer-gap-px reactplayer-text-center">
+            <h3 className="reactplayer-text-xl reactplayer-font-semibold reactplayer-tracking-tight">
               {errorLabel}
             </h3>
 
-            <p className="richtext-text-balance richtext-text-sm richtext-leading-relaxed richtext-text-muted-foreground">
+            <p className="reactplayer-text-balance reactplayer-text-sm reactplayer-leading-relaxed reactplayer-text-muted-foreground">
               {errorDescription}
             </p>
           </div>
 
-          <div className="richtext-flex richtext-items-center richtext-gap-2">
+          <div className="reactplayer-flex reactplayer-items-center reactplayer-gap-2">
             <Button
               disabled={actionState.retryPending}
               onClick={onRetry}
@@ -1139,7 +1139,7 @@ function MediaPlayerError(props: MediaPlayerErrorProps) {
               variant="secondary"
             >
               {actionState.retryPending ? (
-                <Loader2Icon className="richtext-animate-spin" />
+                <Loader2Icon className="reactplayer-animate-spin" />
               ) : (
                 <RefreshCcwIcon />
               )}
@@ -1153,7 +1153,7 @@ function MediaPlayerError(props: MediaPlayerErrorProps) {
               variant="outline"
             >
               {actionState.reloadPending ? (
-                <Loader2Icon className="richtext-animate-spin" />
+                <Loader2Icon className="reactplayer-animate-spin" />
               ) : (
                 <RotateCcwIcon />
               )}
@@ -1199,34 +1199,34 @@ function MediaPlayerVolumeIndicator(props: MediaPlayerVolumeIndicatorProps) {
       role="status"
       {...indicatorProps}
       className={cn(
-        'richtext-pointer-events-none richtext-absolute richtext-inset-0 richtext-z-50 richtext-flex richtext-items-center richtext-justify-center',
+        'reactplayer-pointer-events-none reactplayer-absolute reactplayer-inset-0 reactplayer-z-50 reactplayer-flex reactplayer-items-center reactplayer-justify-center',
         className,
       )}
     >
-      <div className="richtext-backdrop-blur-xs richtext-flex richtext-flex-col richtext-items-center richtext-gap-3 richtext-rounded-lg richtext-bg-black/30 richtext-px-6 richtext-py-4 richtext-text-white richtext-duration-200 richtext-animate-in richtext-fade-in-0 richtext-zoom-in-95">
-        <div className="richtext-flex richtext-items-center richtext-gap-2">
+      <div className="reactplayer-backdrop-blur-xs reactplayer-flex reactplayer-flex-col reactplayer-items-center reactplayer-gap-3 reactplayer-rounded-lg reactplayer-bg-black/30 reactplayer-px-6 reactplayer-py-4 reactplayer-text-white reactplayer-duration-200 reactplayer-animate-in reactplayer-fade-in-0 reactplayer-zoom-in-95">
+        <div className="reactplayer-flex reactplayer-items-center reactplayer-gap-2">
           {mediaVolumeLevel === 'off' || mediaMuted ? (
-            <VolumeXIcon className="richtext-size-6" />
+            <VolumeXIcon className="reactplayer-size-6" />
           ) : mediaVolumeLevel === 'high' ? (
-            <Volume2Icon className="richtext-size-6" />
+            <Volume2Icon className="reactplayer-size-6" />
           ) : (
-            <Volume1Icon className="richtext-size-6" />
+            <Volume1Icon className="reactplayer-size-6" />
           )}
 
-          <span className="richtext-text-sm richtext-font-medium richtext-tabular-nums">
+          <span className="reactplayer-text-sm reactplayer-font-medium reactplayer-tabular-nums">
             {mediaMuted ? 'Muted' : `${volumePercentage}%`}
           </span>
         </div>
 
-        <div className="richtext-flex richtext-items-center richtext-gap-1">
+        <div className="reactplayer-flex reactplayer-items-center reactplayer-gap-1">
           {Array.from({ length: barCount }, (_, index) => (
             <div
               key={index}
               className={cn(
-                'richtext-w-1.5 richtext-rounded-full richtext-transition-all richtext-duration-150',
+                'reactplayer-w-1.5 reactplayer-rounded-full reactplayer-transition-all reactplayer-duration-150',
                 index < activeBarCount && !mediaMuted
-                  ? 'richtext-scale-100 richtext-bg-white'
-                  : 'richtext-scale-90 richtext-bg-white/30',
+                  ? 'reactplayer-scale-100 reactplayer-bg-white'
+                  : 'reactplayer-scale-90 reactplayer-bg-white/30',
               )}
               style={{
                 height: `${12 + index * 2}px`,
@@ -1261,7 +1261,7 @@ function MediaPlayerControlsOverlay(props: MediaPlayerControlsOverlayProps) {
       data-visible={controlsVisible ? '' : undefined}
       {...overlayProps}
       className={cn(
-        'richtext--z-10 richtext-pointer-events-none richtext-absolute richtext-inset-0 richtext-bg-gradient-to-t richtext-from-black/80 richtext-to-transparent richtext-opacity-0 richtext-transition-opacity richtext-duration-200 data-[visible]:richtext-opacity-100',
+        'reactplayer--z-10 reactplayer-pointer-events-none reactplayer-absolute reactplayer-inset-0 reactplayer-bg-gradient-to-t reactplayer-from-black/80 reactplayer-to-transparent reactplayer-opacity-0 reactplayer-transition-opacity reactplayer-duration-200 data-[visible]:reactplayer-opacity-100',
         className,
       )}
     />
@@ -1313,7 +1313,7 @@ function MediaPlayerPlay(props: MediaPlayerPlayProps) {
         size="icon"
         variant="ghost"
         className={cn(
-          'richtext-size-8 [&_svg:not([class*=fill-])]:richtext-fill-current',
+          'reactplayer-size-8 [&_svg:not([class*=fill-])]:reactplayer-fill-current',
           className,
         )}
       >
@@ -1373,7 +1373,7 @@ function MediaPlayerSeekBackward(props: MediaPlayerSeekBackwardProps) {
         disabled={isDisabled}
         type="button"
         {...seekBackwardProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onSeekBackward}
         size="icon"
         variant="ghost"
@@ -1439,7 +1439,7 @@ function MediaPlayerSeekForward(props: MediaPlayerSeekForwardProps) {
         disabled={isDisabled}
         type="button"
         {...seekForwardProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onSeekForward}
         size="icon"
         variant="ghost"
@@ -2050,7 +2050,7 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
       return (
         <div
           aria-hidden="true"
-          className="richtext-absolute richtext-top-0 richtext-h-full richtext-bg-zinc-50 dark:richtext-bg-zinc-950"
+          className="reactplayer-absolute reactplayer-top-0 reactplayer-h-full reactplayer-bg-zinc-50 dark:reactplayer-bg-zinc-950"
           data-slot="media-player-seek-chapter-separator"
           key={`chapter-${index}-${chapterCue.startTime}`}
           role="presentation"
@@ -2092,7 +2092,7 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
   }, [thumbnail?.coords, thumbnail?.src]);
 
   const SeekSlider = (
-    <div className="richtext-relative richtext-w-full"
+    <div className="reactplayer-relative reactplayer-w-full"
       data-slot="media-player-seek-container"
     >
       <SliderPrimitive.Root
@@ -2114,24 +2114,24 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
         step={0.01}
         value={[displayValue]}
         className={cn(
-          'richtext-relative richtext-flex richtext-w-full richtext-touch-none richtext-select-none richtext-items-center data-[disabled]:richtext-pointer-events-none data-[disabled]:richtext-opacity-50',
+          'reactplayer-relative reactplayer-flex reactplayer-w-full reactplayer-touch-none reactplayer-select-none reactplayer-items-center data-[disabled]:reactplayer-pointer-events-none data-[disabled]:reactplayer-opacity-50',
           className,
         )}
       >
-        <SliderPrimitive.Track className="richtext-relative richtext-h-1 richtext-w-full richtext-grow richtext-overflow-hidden richtext-rounded-full richtext-bg-primary/40">
+        <SliderPrimitive.Track className="reactplayer-relative reactplayer-h-1 reactplayer-w-full reactplayer-grow reactplayer-overflow-hidden reactplayer-rounded-full reactplayer-bg-primary/40">
           <div
-            className="richtext-absolute richtext-h-full richtext-bg-primary/70 richtext-will-change-[width]"
+            className="reactplayer-absolute reactplayer-h-full reactplayer-bg-primary/70 reactplayer-will-change-[width]"
             data-slot="media-player-seek-buffered"
             style={{
               width: `${bufferedProgress * 100}%`,
             }}
           />
 
-          <SliderPrimitive.Range className="richtext-absolute richtext-h-full richtext-bg-primary richtext-will-change-[width]" />
+          <SliderPrimitive.Range className="reactplayer-absolute reactplayer-h-full reactplayer-bg-primary reactplayer-will-change-[width]" />
 
           {seekState.isHovering && seekableEnd > 0 && (
             <div
-              className="richtext-absolute richtext-h-full richtext-bg-primary/70 richtext-will-change-[width,opacity]"
+              className="reactplayer-absolute reactplayer-h-full reactplayer-bg-primary/70 reactplayer-will-change-[width,opacity]"
               data-slot="media-player-seek-hover-range"
               style={{
                 width: `var(${SEEK_HOVER_PERCENT}, 0%)`,
@@ -2143,7 +2143,7 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
           {chapterSeparators}
         </SliderPrimitive.Track>
 
-        <SliderPrimitive.Thumb className="focus-visible:richtext-outline-hidden richtext-relative richtext-z-10 richtext-block richtext-size-2.5 richtext-shrink-0 richtext-rounded-full richtext-bg-primary richtext-shadow-sm richtext-ring-ring/50 richtext-transition-[color,box-shadow] richtext-will-change-transform hover:richtext-ring-4 focus-visible:richtext-ring-4 disabled:richtext-pointer-events-none disabled:richtext-opacity-50" />
+        <SliderPrimitive.Thumb className="focus-visible:reactplayer-outline-hidden reactplayer-relative reactplayer-z-10 reactplayer-block reactplayer-size-2.5 reactplayer-shrink-0 reactplayer-rounded-full reactplayer-bg-primary reactplayer-shadow-sm reactplayer-ring-ring/50 reactplayer-transition-[color,box-shadow] reactplayer-will-change-transform hover:reactplayer-ring-4 focus-visible:reactplayer-ring-4 disabled:reactplayer-pointer-events-none disabled:reactplayer-opacity-50" />
       </SliderPrimitive.Root>
 
       {!withoutTooltip &&
@@ -2152,7 +2152,7 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
         seekableEnd > 0 && (
         <MediaPlayerPortal>
           <div
-            className="richtext-pointer-events-none richtext-z-50 [backface-visibility:richtext-hidden] [contain:richtext-layout_style] [transition:richtext-opacity_150ms_ease-in-out]"
+            className="reactplayer-pointer-events-none reactplayer-z-50 [backface-visibility:reactplayer-hidden] [contain:reactplayer-layout_style] [transition:reactplayer-opacity_150ms_ease-in-out]"
             ref={tooltipRef}
             style={{
               position: 'fixed' as const,
@@ -2165,14 +2165,14 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
           >
             <div
               className={cn(
-                'richtext-flex richtext-flex-col richtext-items-center richtext-gap-1.5 richtext-rounded-md richtext-border richtext-bg-background richtext-text-foreground richtext-shadow-sm dark:richtext-bg-zinc-900',
-                thumbnail && 'richtext-min-h-10',
-                !thumbnail && currentChapterCue && 'richtext-px-3 richtext-py-1.5',
+                'reactplayer-flex reactplayer-flex-col reactplayer-items-center reactplayer-gap-1.5 reactplayer-rounded-md reactplayer-border reactplayer-bg-background reactplayer-text-foreground reactplayer-shadow-sm dark:reactplayer-bg-zinc-900',
+                thumbnail && 'reactplayer-min-h-10',
+                !thumbnail && currentChapterCue && 'reactplayer-px-3 reactplayer-py-1.5',
               )}
             >
               {thumbnail?.src && (
                 <div
-                  className="richtext-overflow-hidden richtext-rounded-md richtext-rounded-b-none"
+                  className="reactplayer-overflow-hidden reactplayer-rounded-md reactplayer-rounded-b-none"
                   data-slot="media-player-seek-thumbnail"
                   style={{
                     width: `${SPRITE_CONTAINER_WIDTH}px`,
@@ -2184,7 +2184,7 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
                   ) : (
                     <img
                       alt={`Preview at ${hoverTime}`}
-                      className="richtext-size-full richtext-object-cover"
+                      className="reactplayer-size-full reactplayer-object-cover"
                       src={thumbnail.src}
                     />
                   )}
@@ -2193,7 +2193,7 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
 
               {currentChapterCue && (
                 <div
-                  className="richtext-line-clamp-2 richtext-max-w-48 richtext-text-balance richtext-text-center richtext-text-xs"
+                  className="reactplayer-line-clamp-2 reactplayer-max-w-48 reactplayer-text-balance reactplayer-text-center reactplayer-text-xs"
                   data-slot="media-player-seek-chapter-title"
                 >
                   {currentChapterCue.text}
@@ -2203,9 +2203,9 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
               <div
                 data-slot="media-player-seek-time"
                 className={cn(
-                  'richtext-whitespace-nowrap richtext-text-center richtext-text-xs richtext-tabular-nums',
-                  thumbnail && 'richtext-pb-1.5',
-                  !(thumbnail || currentChapterCue) && 'richtext-px-2.5 richtext-py-1',
+                  'reactplayer-whitespace-nowrap reactplayer-text-center reactplayer-text-xs reactplayer-tabular-nums',
+                  thumbnail && 'reactplayer-pb-1.5',
+                  !(thumbnail || currentChapterCue) && 'reactplayer-px-2.5 reactplayer-py-1',
                 )}
               >
                 {tooltipTimeVariant === 'progress'
@@ -2221,14 +2221,14 @@ function MediaPlayerSeek(props: MediaPlayerSeekProps) {
 
   if (withTime) {
     return (
-      <div className="richtext-flex richtext-w-full richtext-items-center richtext-gap-2">
-        <span className="richtext-text-sm richtext-tabular-nums">
+      <div className="reactplayer-flex reactplayer-w-full reactplayer-items-center reactplayer-gap-2">
+        <span className="reactplayer-text-sm reactplayer-tabular-nums">
           {currentTime}
         </span>
 
         {SeekSlider}
 
-        <span className="richtext-text-sm richtext-tabular-nums">
+        <span className="reactplayer-text-sm reactplayer-tabular-nums">
           {remainingTime}
         </span>
       </div>
@@ -2322,10 +2322,10 @@ function MediaPlayerVolume(props: MediaPlayerVolumeProps) {
       data-disabled={isDisabled ? '' : undefined}
       data-slot="media-player-volume-container"
       className={cn(
-        'richtext-group richtext-flex richtext-items-center',
+        'reactplayer-group reactplayer-flex reactplayer-items-center',
         expandable
-          ? 'richtext-gap-0 group-focus-within:richtext-gap-2 group-hover:richtext-gap-1.5'
-          : 'richtext-gap-1.5',
+          ? 'reactplayer-gap-0 group-focus-within:reactplayer-gap-2 group-hover:reactplayer-gap-1.5'
+          : 'reactplayer-gap-1.5',
         className,
       )}
     >
@@ -2336,7 +2336,7 @@ function MediaPlayerVolume(props: MediaPlayerVolumeProps) {
           aria-controls={`${context.mediaId} ${sliderId}`}
           aria-label={mediaMuted ? 'Unmute' : 'Mute'}
           aria-pressed={mediaMuted}
-          className="richtext-size-8"
+          className="reactplayer-size-8"
           data-slot="media-player-volume-trigger"
           data-state={mediaMuted ? 'on' : 'off'}
           disabled={isDisabled}
@@ -2371,18 +2371,18 @@ function MediaPlayerVolume(props: MediaPlayerVolumeProps) {
         step={0.1}
         value={[effectiveVolume]}
         className={cn(
-          'richtext-relative richtext-flex richtext-touch-none richtext-select-none richtext-items-center',
+          'reactplayer-relative reactplayer-flex reactplayer-touch-none reactplayer-select-none reactplayer-items-center',
           expandable
-            ? 'richtext-w-0 richtext-opacity-0 richtext-transition-[width,opacity] richtext-duration-200 richtext-ease-in-out group-focus-within:richtext-w-16 group-focus-within:richtext-opacity-100 group-hover:richtext-w-16 group-hover:richtext-opacity-100'
-            : 'richtext-w-16',
+            ? 'reactplayer-w-0 reactplayer-opacity-0 reactplayer-transition-[width,opacity] reactplayer-duration-200 reactplayer-ease-in-out group-focus-within:reactplayer-w-16 group-focus-within:reactplayer-opacity-100 group-hover:reactplayer-w-16 group-hover:reactplayer-opacity-100'
+            : 'reactplayer-w-16',
           className,
         )}
       >
-        <SliderPrimitive.Track className="richtext-relative richtext-h-1 richtext-w-full richtext-grow richtext-overflow-hidden richtext-rounded-full richtext-bg-zinc-500">
-          <SliderPrimitive.Range className="richtext-absolute richtext-h-full richtext-bg-primary richtext-will-change-[width]" />
+        <SliderPrimitive.Track className="reactplayer-relative reactplayer-h-1 reactplayer-w-full reactplayer-grow reactplayer-overflow-hidden reactplayer-rounded-full reactplayer-bg-zinc-500">
+          <SliderPrimitive.Range className="reactplayer-absolute reactplayer-h-full reactplayer-bg-primary reactplayer-will-change-[width]" />
         </SliderPrimitive.Track>
 
-        <SliderPrimitive.Thumb className="focus-visible:richtext-outline-hidden richtext-block richtext-size-2.5 richtext-shrink-0 richtext-rounded-full richtext-bg-primary richtext-shadow-sm richtext-ring-ring/50 richtext-transition-[color,box-shadow] richtext-will-change-transform hover:richtext-ring-4 focus-visible:richtext-ring-4 disabled:richtext-pointer-events-none disabled:richtext-opacity-50" />
+        <SliderPrimitive.Thumb className="focus-visible:reactplayer-outline-hidden reactplayer-block reactplayer-size-2.5 reactplayer-shrink-0 reactplayer-rounded-full reactplayer-bg-primary reactplayer-shadow-sm reactplayer-ring-ring/50 reactplayer-transition-[color,box-shadow] reactplayer-will-change-transform hover:reactplayer-ring-4 focus-visible:reactplayer-ring-4 disabled:reactplayer-pointer-events-none disabled:reactplayer-opacity-50" />
       </SliderPrimitive.Root>
     </div>
   );
@@ -2435,7 +2435,7 @@ function MediaPlayerTime(props: MediaPlayerTimeProps) {
         data-variant={variant}
         dir={context.dir}
         {...timeProps}
-        className={cn('richtext-text-foreground/80 richtext-text-sm richtext-tabular-nums', className)}
+        className={cn('reactplayer-text-foreground/80 reactplayer-text-sm reactplayer-tabular-nums', className)}
       >
         {times[variant]}
       </TimePrimitive>
@@ -2449,11 +2449,11 @@ function MediaPlayerTime(props: MediaPlayerTimeProps) {
       dir={context.dir}
       {...timeProps}
       className={cn(
-        'richtext-flex richtext-items-center richtext-gap-1 richtext-text-foreground/80 richtext-text-sm',
+        'reactplayer-flex reactplayer-items-center reactplayer-gap-1 reactplayer-text-foreground/80 reactplayer-text-sm',
         className,
       )}
     >
-      <span className="richtext-tabular-nums">
+      <span className="reactplayer-tabular-nums">
         {times.current}
       </span>
 
@@ -2464,7 +2464,7 @@ function MediaPlayerTime(props: MediaPlayerTimeProps) {
         /
       </span>
 
-      <span className="richtext-tabular-nums">
+      <span className="reactplayer-tabular-nums">
         {times.duration}
       </span>
     </TimePrimitive>
@@ -2539,7 +2539,7 @@ function MediaPlayerPlaybackSpeed(props: MediaPlayerPlaybackSpeedProps) {
             size="icon"
             variant="ghost"
             className={cn(
-              'richtext-h-8 richtext-w-16 aria-[expanded=true]:richtext-bg-accent/50',
+              'reactplayer-h-8 reactplayer-w-16 aria-[expanded=true]:reactplayer-bg-accent/50',
               className,
             )}
           >
@@ -2551,14 +2551,14 @@ function MediaPlayerPlaybackSpeed(props: MediaPlayerPlaybackSpeedProps) {
 
       <DropdownMenuContent
         align="center"
-        className="richtext-min-w-[var(--radix-dropdown-menu-trigger-width)] data-[side=top]:richtext-mb-3.5"
+        className="reactplayer-min-w-[var(--radix-dropdown-menu-trigger-width)] data-[side=top]:reactplayer-mb-3.5"
         //@ts-expect-error
         container={context.portalContainer}
         sideOffset={sideOffset}
       >
         {speeds.map((speed) => (
           <DropdownMenuItem
-            className="richtext-justify-between"
+            className="reactplayer-justify-between"
             key={speed}
             onSelect={() => onPlaybackRateChange(speed)}
           >
@@ -2631,14 +2631,14 @@ function MediaPlayerLoop(props: MediaPlayerLoopProps) {
         disabled={isDisabled}
         type="button"
         {...loopProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onLoopToggle}
         size="icon"
         variant="ghost"
       >
         {children ??
           (isLooping ? (
-            <RepeatIcon className="richtext-text-muted-foreground" />
+            <RepeatIcon className="reactplayer-text-muted-foreground" />
           ) : (
             <RepeatIcon />
           ))}
@@ -2688,7 +2688,7 @@ function MediaPlayerFullscreen(props: MediaPlayerFullscreenProps) {
         disabled={isDisabled}
         type="button"
         {...fullscreenProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onFullscreen}
         size="icon"
         variant="ghost"
@@ -2757,7 +2757,7 @@ function MediaPlayerPiP(props: MediaPlayerPiPProps) {
         disabled={isDisabled}
         type="button"
         {...pipButtonProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onPictureInPicture}
         size="icon"
         variant="ghost"
@@ -2812,7 +2812,7 @@ function MediaPlayerCaptions(props: MediaPlayerCaptionsProps) {
         disabled={isDisabled}
         type="button"
         {...captionsProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onCaptionsToggle}
         size="icon"
         variant="ghost"
@@ -2866,7 +2866,7 @@ function MediaPlayerDownload(props: MediaPlayerDownloadProps) {
         disabled={isDisabled}
         type="button"
         {...downloadProps}
-        className={cn('richtext-size-8', className)}
+        className={cn('reactplayer-size-8', className)}
         onClick={onDownload}
         size="icon"
         variant="ghost"
@@ -3006,7 +3006,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
             size="icon"
             variant="ghost"
             className={cn(
-              'richtext-size-8 aria-[expanded=true]:richtext-bg-accent/50',
+              'reactplayer-size-8 aria-[expanded=true]:reactplayer-bg-accent/50',
               className,
             )}
           >
@@ -3017,23 +3017,23 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
 
       <DropdownMenuContent
         align="end"
-        className="richtext-w-56 data-[side=top]:richtext-mb-3.5"
+        className="reactplayer-w-56 data-[side=top]:reactplayer-mb-3.5"
         //@ts-expect-error
         container={context.portalContainer as any}
         side="top"
         sideOffset={sideOffset}
       >
-        <DropdownMenuLabel className="richtext-sr-only">
+        <DropdownMenuLabel className="reactplayer-sr-only">
           Settings
         </DropdownMenuLabel>
 
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <span className="richtext-flex-1">
+            <span className="reactplayer-flex-1">
               Speed
             </span>
 
-            <Badge className="richtext-rounded-sm"
+            <Badge className="reactplayer-rounded-sm"
               variant="outline"
             >
               {mediaPlaybackRate}
@@ -3044,7 +3044,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
           <DropdownMenuSubContent>
             {speeds.map((speed) => (
               <DropdownMenuItem
-                className="richtext-justify-between"
+                className="reactplayer-justify-between"
                 key={speed}
                 onSelect={() => onPlaybackRateChange(speed)}
               >
@@ -3059,11 +3059,11 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
         {context.isVideo && mediaRenditionList.length > 0 && (
           <DropdownMenuSub>
             <DropdownMenuSubTrigger>
-              <span className="richtext-flex-1">
+              <span className="reactplayer-flex-1">
                 Quality
               </span>
 
-              <Badge className="richtext-rounded-sm"
+              <Badge className="reactplayer-rounded-sm"
                 variant="outline"
               >
                 {selectedRenditionLabel}
@@ -3072,7 +3072,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
 
             <DropdownMenuSubContent>
               <DropdownMenuItem
-                className="richtext-justify-between"
+                className="reactplayer-justify-between"
                 onSelect={() => onRenditionChange('auto')}
               >
                 Auto
@@ -3097,7 +3097,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
 
                   return (
                     <DropdownMenuItem
-                      className="richtext-justify-between"
+                      className="reactplayer-justify-between"
                       key={rendition.id}
                       onSelect={() => onRenditionChange(rendition.id ?? '')}
                     >
@@ -3112,11 +3112,11 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
 
         <DropdownMenuSub>
           <DropdownMenuSubTrigger>
-            <span className="richtext-flex-1">
+            <span className="reactplayer-flex-1">
               Captions
             </span>
 
-            <Badge className="richtext-rounded-sm"
+            <Badge className="reactplayer-rounded-sm"
               variant="outline"
             >
               {selectedSubtitleLabel}
@@ -3125,7 +3125,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
 
           <DropdownMenuSubContent>
             <DropdownMenuItem
-              className="richtext-justify-between"
+              className="reactplayer-justify-between"
               onSelect={onSubtitlesToggle}
             >
               Off
@@ -3139,7 +3139,7 @@ function MediaPlayerSettings(props: MediaPlayerSettingsProps) {
               );
               return (
                 <DropdownMenuItem
-                  className="richtext-justify-between"
+                  className="reactplayer-justify-between"
                   key={`${subtitleTrack.kind}-${subtitleTrack.label}-${subtitleTrack.language}`}
                   onSelect={() => onShowSubtitleTrack(subtitleTrack)}
                 >
@@ -3211,13 +3211,13 @@ function MediaPlayerTooltip(props: MediaPlayerTooltipProps) {
       >
         <TooltipTrigger
           asChild
-          className="richtext-text-foreground focus-visible:richtext-ring-ring/50"
+          className="reactplayer-text-foreground focus-visible:reactplayer-ring-ring/50"
         >
           {children}
         </TooltipTrigger>
 
         <TooltipContent
-          className="richtext-flex richtext-items-center richtext-gap-2 richtext-border richtext-bg-accent richtext-px-2 richtext-py-1 richtext-font-medium richtext-text-foreground data-[side=top]:richtext-mb-3.5 dark:richtext-bg-zinc-900 [&>span]:richtext-hidden"
+          className="reactplayer-flex reactplayer-items-center reactplayer-gap-2 reactplayer-border reactplayer-bg-accent reactplayer-px-2 reactplayer-py-1 reactplayer-font-medium reactplayer-text-foreground data-[side=top]:reactplayer-mb-3.5 dark:reactplayer-bg-zinc-900 [&>span]:reactplayer-hidden"
           //@ts-expect-error
           container={context.portalContainer}
           sideOffset={tooltipSideOffset}
@@ -3227,13 +3227,13 @@ function MediaPlayerTooltip(props: MediaPlayerTooltipProps) {
           </p>
 
           {Array.isArray(shortcut) ? (
-            <div className="richtext-flex richtext-items-center richtext-gap-1">
+            <div className="reactplayer-flex reactplayer-items-center reactplayer-gap-1">
               {shortcut.map((shortcutKey) => (
                 <kbd
-                  className="richtext-shadow-xs richtext-select-none richtext-rounded richtext-border richtext-bg-secondary richtext-px-1.5 richtext-py-0.5 richtext-font-mono richtext-text-[11.2px] richtext-text-foreground"
+                  className="reactplayer-shadow-xs reactplayer-select-none reactplayer-rounded reactplayer-border reactplayer-bg-secondary reactplayer-px-1.5 reactplayer-py-0.5 reactplayer-font-mono reactplayer-text-[11.2px] reactplayer-text-foreground"
                   key={shortcutKey}
                 >
-                  <abbr className="richtext-no-underline"
+                  <abbr className="reactplayer-no-underline"
                     title={shortcutKey}
                   >
                     {shortcutKey}
@@ -3244,10 +3244,10 @@ function MediaPlayerTooltip(props: MediaPlayerTooltipProps) {
           ) : (
             shortcut && (
               <kbd
-                className="richtext-shadow-xs richtext-select-none richtext-rounded richtext-border richtext-bg-secondary richtext-px-1.5 richtext-py-px richtext-font-mono richtext-text-[11.2px] richtext-text-foreground"
+                className="reactplayer-shadow-xs reactplayer-select-none reactplayer-rounded reactplayer-border reactplayer-bg-secondary reactplayer-px-1.5 reactplayer-py-px reactplayer-font-mono reactplayer-text-[11.2px] reactplayer-text-foreground"
                 key={shortcut}
               >
-                <abbr className="richtext-no-underline"
+                <abbr className="reactplayer-no-underline"
                   title={shortcut}
                 >
                   {shortcut}

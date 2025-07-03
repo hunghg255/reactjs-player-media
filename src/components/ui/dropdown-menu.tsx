@@ -27,14 +27,14 @@ const DropdownMenuSubTrigger = React.forwardRef<
   <DropdownMenuPrimitive.SubTrigger
     ref={ref}
     className={cn(
-      'richtext-flex richtext-cursor-default richtext-select-none richtext-items-center richtext-gap-2 richtext-rounded-sm richtext-px-2 richtext-py-1.5 richtext-text-sm richtext-outline-none focus:richtext-bg-accent data-[state=open]:richtext-bg-accent [&_svg]:richtext-pointer-events-none [&_svg]:richtext-size-4 [&_svg]:richtext-shrink-0',
-      inset && 'richtext-pl-8',
+      'reactplayer-flex reactplayer-cursor-default reactplayer-select-none reactplayer-items-center reactplayer-gap-2 reactplayer-rounded-sm reactplayer-px-2 reactplayer-py-1.5 reactplayer-text-sm reactplayer-outline-none focus:reactplayer-bg-accent data-[state=open]:reactplayer-bg-accent [&_svg]:reactplayer-pointer-events-none [&_svg]:reactplayer-size-4 [&_svg]:reactplayer-shrink-0',
+      inset && 'reactplayer-pl-8',
       className
     )}
     {...props}
   >
     {children}
-    <ChevronRight className="richtext-ml-auto" />
+    <ChevronRight className="reactplayer-ml-auto" />
   </DropdownMenuPrimitive.SubTrigger>
 ));
 DropdownMenuSubTrigger.displayName =
@@ -47,7 +47,7 @@ const DropdownMenuSubContent = React.forwardRef<
   <DropdownMenuPrimitive.SubContent
     ref={ref}
     className={cn(
-      'richtext-z-50 richtext-min-w-[8rem] richtext-overflow-hidden richtext-rounded-md richtext-border richtext-bg-popover richtext-p-1 richtext-text-popover-foreground richtext-shadow-lg data-[state=open]:richtext-animate-in data-[state=closed]:richtext-animate-out data-[state=closed]:richtext-fade-out-0 data-[state=open]:richtext-fade-in-0 data-[state=closed]:richtext-zoom-out-95 data-[state=open]:richtext-zoom-in-95 data-[side=bottom]:richtext-slide-in-from-top-2 data-[side=left]:richtext-slide-in-from-right-2 data-[side=right]:richtext-slide-in-from-left-2 data-[side=top]:richtext-slide-in-from-bottom-2 richtext-origin-[--radix-dropdown-menu-content-transform-origin]',
+      'reactplayer-z-50 reactplayer-min-w-[8rem] reactplayer-overflow-hidden reactplayer-rounded-md reactplayer-border reactplayer-bg-popover reactplayer-p-1 reactplayer-text-popover-foreground reactplayer-shadow-lg data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-dropdown-menu-content-transform-origin]',
       className
     )}
     {...props}
@@ -65,7 +65,7 @@ const DropdownMenuContent = React.forwardRef<
       ref={ref}
       sideOffset={sideOffset}
       className={cn(
-        'richtext-z-50 richtext-max-h-[var(--radix-dropdown-menu-content-available-height)] richtext-min-w-[8rem] richtext-overflow-y-auto richtext-overflow-x-hidden richtext-rounded-md richtext-border richtext-bg-popover richtext-p-1 richtext-text-popover-foreground richtext-shadow-md data-[state=open]:richtext-animate-in data-[state=closed]:richtext-animate-out data-[state=closed]:richtext-fade-out-0 data-[state=open]:richtext-fade-in-0 data-[state=closed]:richtext-zoom-out-95 data-[state=open]:richtext-zoom-in-95 data-[side=bottom]:richtext-slide-in-from-top-2 data-[side=left]:richtext-slide-in-from-right-2 data-[side=right]:richtext-slide-in-from-left-2 data-[side=top]:richtext-slide-in-from-bottom-2 richtext-origin-[--radix-dropdown-menu-content-transform-origin]',
+        'reactplayer-z-50 reactplayer-max-h-[var(--radix-dropdown-menu-content-available-height)] reactplayer-min-w-[8rem] reactplayer-overflow-y-auto reactplayer-overflow-x-hidden reactplayer-rounded-md reactplayer-border reactplayer-bg-popover reactplayer-p-1 reactplayer-text-popover-foreground reactplayer-shadow-md data-[state=open]:reactplayer-animate-in data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=open]:reactplayer-fade-in-0 data-[state=closed]:reactplayer-zoom-out-95 data-[state=open]:reactplayer-zoom-in-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-dropdown-menu-content-transform-origin]',
         className
       )}
       {...props}
@@ -83,8 +83,8 @@ const DropdownMenuItem = React.forwardRef<
   <DropdownMenuPrimitive.Item
     ref={ref}
     className={cn(
-      'richtext-relative richtext-flex richtext-cursor-default richtext-select-none richtext-items-center richtext-gap-2 richtext-rounded-sm richtext-px-2 richtext-py-1.5 richtext-text-sm richtext-outline-none richtext-transition-colors focus:richtext-bg-accent focus:richtext-text-accent-foreground data-[disabled]:richtext-pointer-events-none data-[disabled]:richtext-opacity-50 [&_svg]:richtext-pointer-events-none [&_svg]:richtext-size-4 [&_svg]:richtext-shrink-0',
-      inset && 'richtext-pl-8',
+      'reactplayer-relative reactplayer-flex reactplayer-cursor-default reactplayer-select-none reactplayer-items-center reactplayer-gap-2 reactplayer-rounded-sm reactplayer-px-2 reactplayer-py-1.5 reactplayer-text-sm reactplayer-outline-none reactplayer-transition-colors focus:reactplayer-bg-accent focus:reactplayer-text-accent-foreground data-[disabled]:reactplayer-pointer-events-none data-[disabled]:reactplayer-opacity-50 [&_svg]:reactplayer-pointer-events-none [&_svg]:reactplayer-size-4 [&_svg]:reactplayer-shrink-0',
+      inset && 'reactplayer-pl-8',
       className
     )}
     {...props}
@@ -99,15 +99,15 @@ const DropdownMenuCheckboxItem = React.forwardRef<
   <DropdownMenuPrimitive.CheckboxItem
     ref={ref}
     className={cn(
-      'richtext-relative richtext-flex richtext-cursor-default richtext-select-none richtext-items-center richtext-rounded-sm richtext-py-1.5 richtext-pl-8 richtext-pr-2 richtext-text-sm richtext-outline-none richtext-transition-colors focus:richtext-bg-accent focus:richtext-text-accent-foreground data-[disabled]:richtext-pointer-events-none data-[disabled]:richtext-opacity-50',
+      'reactplayer-relative reactplayer-flex reactplayer-cursor-default reactplayer-select-none reactplayer-items-center reactplayer-rounded-sm reactplayer-py-1.5 reactplayer-pl-8 reactplayer-pr-2 reactplayer-text-sm reactplayer-outline-none reactplayer-transition-colors focus:reactplayer-bg-accent focus:reactplayer-text-accent-foreground data-[disabled]:reactplayer-pointer-events-none data-[disabled]:reactplayer-opacity-50',
       className
     )}
     checked={checked}
     {...props}
   >
-    <span className="richtext-absolute richtext-left-2 richtext-flex richtext-h-3.5 richtext-w-3.5 richtext-items-center richtext-justify-center">
+    <span className="reactplayer-absolute reactplayer-left-2 reactplayer-flex reactplayer-h-3.5 reactplayer-w-3.5 reactplayer-items-center reactplayer-justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <Check className="richtext-h-4 richtext-w-4" />
+        <Check className="reactplayer-h-4 reactplayer-w-4" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
@@ -123,14 +123,14 @@ const DropdownMenuRadioItem = React.forwardRef<
   <DropdownMenuPrimitive.RadioItem
     ref={ref}
     className={cn(
-      'richtext-relative richtext-flex richtext-cursor-default richtext-select-none richtext-items-center richtext-rounded-sm richtext-py-1.5 richtext-pl-8 richtext-pr-2 richtext-text-sm richtext-outline-none richtext-transition-colors focus:richtext-bg-accent focus:richtext-text-accent-foreground data-[disabled]:richtext-pointer-events-none data-[disabled]:richtext-opacity-50',
+      'reactplayer-relative reactplayer-flex reactplayer-cursor-default reactplayer-select-none reactplayer-items-center reactplayer-rounded-sm reactplayer-py-1.5 reactplayer-pl-8 reactplayer-pr-2 reactplayer-text-sm reactplayer-outline-none reactplayer-transition-colors focus:reactplayer-bg-accent focus:reactplayer-text-accent-foreground data-[disabled]:reactplayer-pointer-events-none data-[disabled]:reactplayer-opacity-50',
       className
     )}
     {...props}
   >
-    <span className="richtext-absolute richtext-left-2 richtext-flex richtext-h-3.5 richtext-w-3.5 richtext-items-center richtext-justify-center">
+    <span className="reactplayer-absolute reactplayer-left-2 reactplayer-flex reactplayer-h-3.5 reactplayer-w-3.5 reactplayer-items-center reactplayer-justify-center">
       <DropdownMenuPrimitive.ItemIndicator>
-        <Circle className="richtext-h-2 richtext-w-2 richtext-fill-current" />
+        <Circle className="reactplayer-h-2 reactplayer-w-2 reactplayer-fill-current" />
       </DropdownMenuPrimitive.ItemIndicator>
     </span>
     {children}
@@ -147,8 +147,8 @@ const DropdownMenuLabel = React.forwardRef<
   <DropdownMenuPrimitive.Label
     ref={ref}
     className={cn(
-      'richtext-px-2 richtext-py-1.5 richtext-text-sm richtext-font-semibold',
-      inset && 'richtext-pl-8',
+      'reactplayer-px-2 reactplayer-py-1.5 reactplayer-text-sm reactplayer-font-semibold',
+      inset && 'reactplayer-pl-8',
       className
     )}
     {...props}
@@ -162,7 +162,7 @@ const DropdownMenuSeparator = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <DropdownMenuPrimitive.Separator
     ref={ref}
-    className={cn('richtext--mx-1 richtext-my-1 richtext-h-px richtext-bg-muted', className)}
+    className={cn('reactplayer--mx-1 reactplayer-my-1 reactplayer-h-px reactplayer-bg-muted', className)}
     {...props}
   />
 ));
@@ -174,7 +174,7 @@ function DropdownMenuShortcut ({
 }: React.HTMLAttributes<HTMLSpanElement>) {
   return (
     <span
-      className={cn('richtext-ml-auto richtext-text-xs richtext-tracking-widest richtext-opacity-60', className)}
+      className={cn('reactplayer-ml-auto reactplayer-text-xs reactplayer-tracking-widest reactplayer-opacity-60', className)}
       {...props}
     />
   );

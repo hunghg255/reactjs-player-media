@@ -19,7 +19,7 @@ const TooltipContent = React.forwardRef<
     ref={ref}
     sideOffset={sideOffset}
     className={cn(
-      'richtext-z-50 richtext-overflow-hidden richtext-rounded-md richtext-border richtext-bg-popover richtext-px-3 richtext-py-1.5 richtext-text-sm richtext-text-popover-foreground richtext-shadow-md richtext-animate-in richtext-fade-in-0 richtext-zoom-in-95 data-[state=closed]:richtext-animate-out data-[state=closed]:richtext-fade-out-0 data-[state=closed]:richtext-zoom-out-95 data-[side=bottom]:richtext-slide-in-from-top-2 data-[side=left]:richtext-slide-in-from-right-2 data-[side=right]:richtext-slide-in-from-left-2 data-[side=top]:richtext-slide-in-from-bottom-2 richtext-origin-[--radix-tooltip-content-transform-origin]',
+      'reactplayer-z-50 reactplayer-overflow-hidden reactplayer-rounded-md reactplayer-border reactplayer-bg-popover reactplayer-px-3 reactplayer-py-1.5 reactplayer-text-sm reactplayer-text-popover-foreground reactplayer-shadow-md reactplayer-animate-in reactplayer-fade-in-0 reactplayer-zoom-in-95 data-[state=closed]:reactplayer-animate-out data-[state=closed]:reactplayer-fade-out-0 data-[state=closed]:reactplayer-zoom-out-95 data-[side=bottom]:reactplayer-slide-in-from-top-2 data-[side=left]:reactplayer-slide-in-from-right-2 data-[side=right]:reactplayer-slide-in-from-left-2 data-[side=top]:reactplayer-slide-in-from-bottom-2 reactplayer-origin-[--radix-tooltip-content-transform-origin]',
       className
     )}
     {...props}

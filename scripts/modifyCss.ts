@@ -12,7 +12,7 @@ function modifyPrefixVariableCss() {
     for (const match of cssMatch) {
       const reg = new RegExp(`--${match}`, 'g')
 
-      newCss = newCss.replace(reg, `--richtext-${match}`)
+      newCss = newCss.replace(reg, `--reactplayer-${match}`)
     }
 
     fs.writeFileSync(path.resolve(cwd(), 'lib/style.css'), newCss)

@@ -12,15 +12,15 @@ const Slider = React.forwardRef<
   <SliderPrimitive.Root
     ref={ref}
     className={cn(
-      'richtext-relative richtext-flex richtext-w-full richtext-touch-none richtext-select-none richtext-items-center',
+      'reactplayer-relative reactplayer-flex reactplayer-w-full reactplayer-touch-none reactplayer-select-none reactplayer-items-center',
       className
     )}
     {...props}
   >
-    <SliderPrimitive.Track className="richtext-relative richtext-h-2 richtext-w-full richtext-grow richtext-overflow-hidden richtext-rounded-full richtext-bg-secondary">
-      <SliderPrimitive.Range className="richtext-absolute richtext-h-full richtext-bg-primary" />
+    <SliderPrimitive.Track className="reactplayer-relative reactplayer-h-2 reactplayer-w-full reactplayer-grow reactplayer-overflow-hidden reactplayer-rounded-full reactplayer-bg-secondary">
+      <SliderPrimitive.Range className="reactplayer-absolute reactplayer-h-full reactplayer-bg-primary" />
     </SliderPrimitive.Track>
-    <SliderPrimitive.Thumb className="richtext-block richtext-h-5 richtext-w-5 richtext-rounded-full richtext-border-2 richtext-border-primary richtext-bg-background richtext-ring-offset-background richtext-transition-colors focus-visible:richtext-outline-none focus-visible:richtext-ring-2 focus-visible:richtext-ring-ring focus-visible:richtext-ring-offset-2 disabled:richtext-pointer-events-none disabled:richtext-opacity-50" />
+    <SliderPrimitive.Thumb className="reactplayer-block reactplayer-h-5 reactplayer-w-5 reactplayer-rounded-full reactplayer-border-2 reactplayer-border-primary reactplayer-bg-background reactplayer-ring-offset-background reactplayer-transition-colors focus-visible:reactplayer-outline-none focus-visible:reactplayer-ring-2 focus-visible:reactplayer-ring-ring focus-visible:reactplayer-ring-offset-2 disabled:reactplayer-pointer-events-none disabled:reactplayer-opacity-50" />
   </SliderPrimitive.Root>
 ));
 Slider.displayName = SliderPrimitive.Root.displayName;

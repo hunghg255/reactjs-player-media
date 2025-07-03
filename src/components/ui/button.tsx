@@ -5,25 +5,25 @@ import { cva, type VariantProps } from 'class-variance-authority';
 import { cn } from '@/lib/utils';
 
 const buttonVariants = cva(
-  'richtext-inline-flex richtext-items-center richtext-justify-center richtext-gap-2 richtext-whitespace-nowrap richtext-rounded-md richtext-text-sm richtext-font-medium richtext-ring-offset-background richtext-transition-colors focus-visible:richtext-outline-none focus-visible:richtext-ring-2 focus-visible:richtext-ring-ring focus-visible:richtext-ring-offset-2 disabled:richtext-pointer-events-none disabled:richtext-opacity-50 [&_svg]:richtext-pointer-events-none [&_svg]:richtext-size-4 [&_svg]:richtext-shrink-0',
+  'reactplayer-inline-flex reactplayer-items-center reactplayer-justify-center reactplayer-gap-2 reactplayer-whitespace-nowrap reactplayer-rounded-md reactplayer-text-sm reactplayer-font-medium reactplayer-ring-offset-background reactplayer-transition-colors focus-visible:reactplayer-outline-none focus-visible:reactplayer-ring-2 focus-visible:reactplayer-ring-ring focus-visible:reactplayer-ring-offset-2 disabled:reactplayer-pointer-events-none disabled:reactplayer-opacity-50 [&_svg]:reactplayer-pointer-events-none [&_svg]:reactplayer-size-4 [&_svg]:reactplayer-shrink-0',
   {
     variants: {
       variant: {
-        default: 'richtext-bg-primary richtext-text-primary-foreground hover:richtext-bg-primary/90',
+        default: 'reactplayer-bg-primary reactplayer-text-primary-foreground hover:reactplayer-bg-primary/90',
         destructive:
-          'richtext-bg-destructive richtext-text-destructive-foreground hover:richtext-bg-destructive/90',
+          'reactplayer-bg-destructive reactplayer-text-destructive-foreground hover:reactplayer-bg-destructive/90',
         outline:
-          'richtext-border richtext-border-input richtext-bg-background hover:richtext-bg-accent hover:richtext-text-accent-foreground',
+          'reactplayer-border reactplayer-border-input reactplayer-bg-background hover:reactplayer-bg-accent hover:reactplayer-text-accent-foreground',
         secondary:
-          'richtext-bg-secondary richtext-text-secondary-foreground hover:richtext-bg-secondary/80',
-        ghost: 'hover:richtext-bg-accent hover:richtext-text-accent-foreground',
-        link: 'richtext-text-primary richtext-underline-offset-4 hover:richtext-underline',
+          'reactplayer-bg-secondary reactplayer-text-secondary-foreground hover:reactplayer-bg-secondary/80',
+        ghost: 'hover:reactplayer-bg-accent hover:reactplayer-text-accent-foreground',
+        link: 'reactplayer-text-primary reactplayer-underline-offset-4 hover:reactplayer-underline',
       },
       size: {
-        default: 'richtext-h-10 richtext-px-4 richtext-py-2',
-        sm: 'richtext-h-9 richtext-rounded-md richtext-px-3',
-        lg: 'richtext-h-11 richtext-rounded-md richtext-px-8',
-        icon: 'richtext-h-10 richtext-w-10',
+        default: 'reactplayer-h-10 reactplayer-px-4 reactplayer-py-2',
+        sm: 'reactplayer-h-9 reactplayer-rounded-md reactplayer-px-3',
+        lg: 'reactplayer-h-11 reactplayer-rounded-md reactplayer-px-8',
+        icon: 'reactplayer-h-10 reactplayer-w-10',
       },
     },
     defaultVariants: {

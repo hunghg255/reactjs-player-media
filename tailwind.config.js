@@ -7,7 +7,7 @@ export default {
   corePlugins: {
     preflight: false,
   },
-  prefix: 'richtext-',
+  prefix: 'reactplayer-',
 
   content: [
     './pages/**/*.{ts,tsx}',
